@@ -4,11 +4,16 @@ import Dashboard from "./pages/Dashboard";
 
 const App = () => {
     return (
-      <Router>
-          <Switch>
-              <Route unique path="/" component={ Dashboard } />
-          </Switch>
-      </Router>
+        <div className="container">
+            <Router>
+                <div className="navbar">
+                    <Link to={'/'} className="nav-link"> Dashboard </Link>
+                </div>
+                <Switch>
+                    <Route unique path="/" component={ Dashboard } />
+                </Switch>
+            </Router>
+        </div>
     );
 }
 
