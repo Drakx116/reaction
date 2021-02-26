@@ -1,3 +1,5 @@
+import Single from "./_single";
+
 const List = ({ data }) => {
   return (
     <table>
@@ -10,13 +12,9 @@ const List = ({ data }) => {
       </thead>
 
       <tbody>
-        { data.results.map(character => {
+        { data.results.map((character, i) => {
           return (
-            <tr key={ character.name }>
-              <td> { character.name } </td>
-              <td> { character.gender } </td>
-              <td> { character.birth_year } </td>
-            </tr>
+            <Single key={ character.name } character={ character } />
           );
         })}
       </tbody>

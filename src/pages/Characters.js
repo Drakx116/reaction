@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import getAllCharacters from "../api/characters";
 import List from "../components/characters/_list";
+import Filter from "../components/characters/_filter";
 
 const Characters = () => {
     const [data, setData] = useState(null);
@@ -18,7 +19,13 @@ const Characters = () => {
         <div className="container">
             <h1 className="title"> Characters </h1>
 
-            { (data) ? <List data={ data } /> : 'Loading ...' }
+            { (data)
+              ? <div>
+                  <Filter data={ data } />
+                  <List data={ data } />
+                </div>
+              : 'Loading ...'
+            }
         </div>
     )
 }
