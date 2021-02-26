@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import getAllCharacters from "../api/characters";
+import List from "../components/characters/_list";
 
 const Characters = () => {
     const [data, setData] = useState(null);
@@ -16,11 +17,8 @@ const Characters = () => {
     return (
         <div className="container">
             <h1 className="title"> Characters </h1>
-            { (data) ? data.results.map(character => {
-                return (
-                  <li> { character.name } </li>
-                );
-            }) : 'Loading ...' }
+
+            { (data) ? <List data={ data } /> : 'Loading ...' }
         </div>
     )
 }
