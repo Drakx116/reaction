@@ -19,7 +19,8 @@ const Filter = ({ data }) =>
 
   return (
     <div>
-      <input type="text" name="seach" onKeyUp={ event => updateList(event) } />
+      <label htmlFor="search"><b> Search </b></label>
+      <input id="search" type="text" name="search" onKeyUp={ event => updateList(event) } />
     </div>
   );
 }
