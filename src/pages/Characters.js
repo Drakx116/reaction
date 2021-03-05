@@ -23,7 +23,7 @@ const Characters = () => {
             { (data)
               ? <div>
                   <Filter data={ data } />
-                  <List data={ data } />
+                  <List page={ page } data={ data } />
                   <Pagination onChange={ updatePagination } page={ page }  />
                 </div>
               : 'Loading ...'

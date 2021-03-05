@@ -1,6 +1,6 @@
 import Single from "./_single";
 
-const List = ({ data }) => {
+const List = ({ data, page }) => {
   return (
     <table>
       <thead>
@@ -14,7 +14,7 @@ const List = ({ data }) => {
       <tbody>
         { data.results.map((character, i) => {
           return (
-            <Single key={ i } character={ character } />
+            <Single page={ page } key={ i } place={ i } character={ character } />
           );
         })}
       </tbody>
