@@ -14,7 +14,7 @@ const List = ({ data }) => {
       <tbody>
         { data.results.map((character, i) => {
           return (
-            <Single key={ character.name } character={ character } />
+            <Single key={ i } character={ character } />
           );
         })}
       </tbody>

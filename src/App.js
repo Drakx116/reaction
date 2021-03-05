@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import 'bulma/css/bulma.css';
 import Dashboard from "./pages/Dashboard";
 import Characters from "./pages/Characters";
+import Single from "./pages/Single";
 
 const App = () => {
     return (
@@ -14,6 +15,7 @@ const App = () => {
                 <Switch>
                     <Route exact path="/" component={ Dashboard } />
                     <Route exact path="/characters" component={ Characters } />
+                    <Route path="/characters/:id" component={ Single } />
                 </Switch>
             </Router>
         </div>
