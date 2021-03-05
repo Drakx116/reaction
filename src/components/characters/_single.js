@@ -1,5 +1,5 @@
 const Single = ({ character, page, place }) => {
-  const link = '/characters/' + (page * 10 +  place);
+  const link = 'characters/' +  parseInt( (page - 1) * 10 + place + 1);
 
   return (
     <tr id={character.name}>
