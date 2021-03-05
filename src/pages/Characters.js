@@ -9,7 +9,6 @@ const Characters = () => {
     const [ page, setPage ] = useState(1);
 
     useEffect(() => {
-        console.log('Updated');
         getAllCharacters(page).then(data => setData(data));
     }, [page]);
 

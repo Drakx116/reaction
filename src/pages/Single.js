@@ -9,7 +9,6 @@ const Single = ({ match }) => {
         if (!data) {
             getCharacterById(match.params.id).then(data => {
                 setData(data);
-                console.log(data)
             });
         }
     });
