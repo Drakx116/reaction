@@ -1,0 +1,9 @@
+const LIKE_CHARACTER = "LIKE_CHARACTER";
+const DISLIKE_CHARACTER = "DISLIKE_CHARACTER";
+
+const types = {
+    LIKE_CHARACTER,
+    DISLIKE_CHARACTER
+};
+
+export default types;
