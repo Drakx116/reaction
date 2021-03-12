@@ -1,20 +1,26 @@
 import likeActions from '../constants/like';
 
 const initialState = {
-    characters: {}
+    characters: []
 };
 
-const authReducer = (state = initialState, { type, payload }) => {
+const likeReducer = (state = initialState, { type, payload }) => {
     switch (type) {
         case likeActions.LIKE_CHARACTER:
-            return [ ...state, { 'lambda': 1 } ]  ;
-
         case likeActions.DISLIKE_CHARACTER:
-            return [ ...state, { 'lambda': -1 } ];
+            const { id, status } = payload;
+
+            if (id in state.characters && state.characters[id] === status) {
+                state.characters.splice(id, 1);
+                return state;
+            }
+
+            state.characters[id] = status;
+            return state;
 
         default:
             return state;
     }
 };
 
-export default authReducer;
+export default likeReducer;

@@ -1,19 +1,19 @@
 import types from '../constants/like';
 
-const like = (character) => {
+const like = (id) => {
     return {
         type: types.LIKE_CHARACTER,
         payload: {
-            character
+            id, 'status': types.LIKED
         }
     };
 };
 
-const dislike = (character) => {
+const dislike = (id) => {
     return {
         type: types.DISLIKE_CHARACTER,
         payload: {
-            character
+            id, status: types.DISLIKED
         }
     };
 };
