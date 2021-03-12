@@ -1,9 +1,14 @@
 const LIKE_CHARACTER = "LIKE_CHARACTER";
 const DISLIKE_CHARACTER = "DISLIKE_CHARACTER";
 
+const LIKED = "LIKED";
+const DISLIKED = "DISLIKED";
+
 const types = {
     LIKE_CHARACTER,
-    DISLIKE_CHARACTER
+    DISLIKE_CHARACTER,
+    LIKED,
+    DISLIKED
 };
 
 export default types;
