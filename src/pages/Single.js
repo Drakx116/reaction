@@ -16,7 +16,7 @@ const Single = ({ match }) => {
     return (
         <div className="container">
             <h1 className="title"> { data ? data.name : 'Single Character' } </h1>
-            { data ? <Character data={ data } /> : 'Loading' }
+            { data ? <Character data={ data } id={ match.params.id } /> : 'Loading' }
 
         </div>
     );
