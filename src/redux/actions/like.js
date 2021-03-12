@@ -1,23 +1,23 @@
 import types from '../constants/like';
 
-const addToken = (token) => {
+const like = (character) => {
     return {
         type: types.LIKE_CHARACTER,
         payload: {
-            token
+            character
         }
     };
 };
 
-const removeToken = () => {
+const dislike = (character) => {
     return {
-        type: types.DISLIKE_CHARACTER
+        type: types.DISLIKE_CHARACTER,
+        payload: {
+            character
+        }
     };
 };
 
-const actions = {
-    addToken,
-    removeToken
-};
+const actions = { like, dislike };
 
 export default actions;
